@@ -1,0 +1,19 @@
+.ra-trust__grid {
+  display: grid;
+  gap: var(--s-6);
+  margin-top: var(--s-6);
+}
+
+.ra-trust__card-title { font-size: var(--fs-h3); margin-bottom: var(--s-4); }
+
+.ra-trust__side {
+  display: grid;
+  gap: var(--s-4);
+}
+
+@media (min-width: 900px) {
+  .ra-trust__grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}

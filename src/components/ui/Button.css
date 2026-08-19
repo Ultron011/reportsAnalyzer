@@ -1,0 +1,94 @@
+.ra-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  font-family: var(--font-body);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: var(--r-btn);
+  border: 1px solid transparent;
+  min-height: var(--tap-min);
+  padding: 0 var(--s-5);
+  transition: background-color var(--dur) var(--ease), border-color var(--dur) var(--ease), color var(--dur) var(--ease), transform var(--dur-fast) var(--ease), box-shadow var(--dur-fast) var(--ease);
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.ra-btn:active { transform: translateY(1px); }
+
+/* sizes */
+.ra-btn--sm { min-height: var(--tap-min); padding: 0 var(--s-4); font-size: var(--fs-sm); }
+.ra-btn--md { min-height: var(--tap-min); padding: 0 var(--s-5); font-size: var(--fs-body); }
+.ra-btn--lg { min-height: 52px; padding: 0 var(--s-6); font-size: var(--fs-body-lg); }
+
+/* primary: the one accent, the one next-step action */
+.ra-btn--primary {
+  background: var(--accent);
+  color: var(--ink-invert);
+  border-color: var(--accent);
+}
+.ra-btn--primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* secondary: brand-ink outline */
+.ra-btn--secondary {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line-2);
+}
+.ra-btn--secondary:hover { border-color: var(--ink); }
+
+/* ghost: no fill, no border */
+.ra-btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  border-color: transparent;
+}
+.ra-btn--ghost:hover { background: var(--surface-2); }
+
+/* danger */
+.ra-btn--danger {
+  background: var(--alert-bg);
+  color: var(--alert);
+  border-color: var(--alert);
+}
+.ra-btn--danger:hover { background: var(--alert); color: var(--ink-invert); }
+
+.ra-btn[aria-disabled="true"] {
+  background: var(--disabled-bg);
+  color: var(--disabled-ink);
+  border-color: var(--disabled-line);
+  cursor: not-allowed;
+}
+
+.ra-btn__hint {
+  display: block;
+  margin-top: var(--s-2);
+  font-size: var(--fs-sm);
+  color: var(--muted);
+}
+
+.ra-btn__spinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  animation: ra-spin var(--dur-slow) linear infinite;
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ra-btn__spinner { animation: none; }
+  .ra-btn--primary:hover { transform: none; }
+}
+
+@keyframes ra-spin {
+  to { transform: rotate(360deg); }
+}

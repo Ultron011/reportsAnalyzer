@@ -1,0 +1,20 @@
+.ra-h2 { font-size: var(--fs-h2); max-width: 22ch; }
+
+.ra-sample__intro {
+  font-size: var(--fs-body-lg);
+  color: var(--muted);
+  max-width: var(--measure);
+  margin-bottom: var(--s-6);
+}
+
+.ra-sample__carry {
+  background: var(--accent-tint);
+  color: var(--accent-ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 600;
+  padding: var(--s-4);
+  border-radius: var(--r-md);
+}
+
+.ra-sample__alert { margin-top: var(--s-6); }

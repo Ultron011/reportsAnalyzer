@@ -1,0 +1,21 @@
+.ra-final {
+  max-width: 62ch;
+}
+
+.ra-final__body {
+  font-size: var(--fs-body-lg);
+  color: var(--muted);
+  margin-bottom: var(--s-5);
+}
+
+.ra-final__actions {
+  display: flex;
+  align-items: stretch;
+}
+
+.ra-final__actions .ra-btn { width: 100%; }
+
+@media (min-width: 400px) {
+  .ra-final__actions { display: inline-flex; }
+  .ra-final__actions .ra-btn { width: auto; }
+}

@@ -1,0 +1,31 @@
+.ra-privacy {
+  display: flex;
+  gap: var(--s-3);
+  align-items: flex-start;
+  background: var(--info-bg);
+  color: var(--info);
+  border-radius: var(--r-md);
+  padding: var(--s-4);
+}
+
+.ra-privacy__icon { flex-shrink: 0; margin-top: 3px; }
+
+.ra-privacy__list {
+  display: grid;
+  gap: var(--s-2);
+  font-size: var(--fs-sm);
+  color: var(--ink);
+}
+
+.ra-privacy__list li { position: relative; padding-left: var(--s-4); }
+
+.ra-privacy__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: .6em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--info);
+}

@@ -1,0 +1,55 @@
+/**
+ * Shared sample data for the three hero card variants. Same underlying
+ * numbers as the original TransformStrip rows — TSH, Hemoglobin, Free T4,
+ * Glucose — restructured for the range-bar visual instead of a raw table.
+ */
+export const HERO_REPORT_ROWS = [
+  {
+    code: 'TSH',
+    label: 'TSH',
+    value: 6.8,
+    unit: 'mIU/L',
+    scaleMin: 0,
+    scaleMax: 8,
+    normalLow: 0.4,
+    normalHigh: 4.0,
+    flag: 'high',
+    take: 'Your thyroid is working harder than it should.',
+  },
+  {
+    code: 'Hemoglobin',
+    label: 'Hemoglobin',
+    value: 10.9,
+    unit: 'g/dL',
+    scaleMin: 8,
+    scaleMax: 18,
+    normalLow: 12.0,
+    normalHigh: 15.5,
+    flag: 'low',
+    take: 'Red blood cell count is a little low, which can leave you feeling tired.',
+  },
+  {
+    code: 'Free T4',
+    label: 'Free T4',
+    value: 1.1,
+    unit: 'ng/dL',
+    scaleMin: 0.4,
+    scaleMax: 2.2,
+    normalLow: 0.8,
+    normalHigh: 1.8,
+    flag: null,
+    take: 'Within the usual range.',
+  },
+  {
+    code: 'Glucose',
+    label: 'Glucose (fasting)',
+    value: 92,
+    unit: 'mg/dL',
+    scaleMin: 50,
+    scaleMax: 130,
+    normalLow: 70,
+    normalHigh: 99,
+    flag: null,
+    take: 'Within the usual range.',
+  },
+];
